@@ -1,17 +1,14 @@
 from typing import Dict
-from ttsCode.src.dependencyInjection.DependencyInjection import DependencyInjection
+from huiAudioCorpus.dependencyInjection.DependencyInjection import DependencyInjection
 import datasetWorkflow
 import ttsCode.scripts.createDatasetConfig as createDatasetConfig
-from ttsCode.src.utils.PathUtil import PathUtil
+from huiAudioCorpus.utils.PathUtil import PathUtil
 import os
 
 pathUtil = PathUtil()
 basePath = createDatasetConfig.__path__[0]  # type: ignore
 
 externalPaths = [
-    'E:/repositorys/textToSpeech/datasetWorkflow',
-    '/mnt/e/repositorys/textToSpeech/datasetWorkflow',
-    '/media/ppuchtler/TOSHIBA_EXT/repositorys/textToSpeech/datasetWorkflow',
 ]
 
 dataBasePath = datasetWorkflow.__path__[0]  # type: ignore
@@ -27,7 +24,7 @@ def logStep(name):
     print('#######################################################')
     print('')
 
-
+### load all configurations
 bernd_1 = pathUtil.loadJson(
     basePath + '/Bernd_Ungerer_tausendUndEineNacht.json')
 bernd_2 = pathUtil.loadJson(basePath + '/Bernd_Ungerer_other.json')
@@ -47,23 +44,25 @@ if len(duplicatIds) > 0:
     raise Exception("Duplicate Librivox ids: " + str(duplicatIds))
 
 
+# configere this object to only create a single speacker
 allConfigs = {**bernd, **hokuspokus, **friedrich, **eva, **karlsson, **sonja}
-
+allConfigs = sonja
 #allConfigs = redaer
 
+# this is needed for the statistic and split into others
 specialSpeackers = ['Bernd_Ungerer', 'Eva_K', 'Friedrich', 'Hokuspokus', 'Karlsson']
 
 workflowConfig = {
     'continueOnError': False,
-    'prepareAudio': False,
-    'prepareText': False,
-    'transcriptText': False,
-    'alignText': False,
-    'finalize': False,
-    'audioRawStatistic': False,
+    'prepareAudio': True,
+    'prepareText': True,
+    'transcriptText': True,
+    'alignText': True,
+    'finalize': True,
+    'audioRawStatistic': True,
     'cleanStatistic': True,
     'fullStatistic': True,
-    'generateClean': False
+    'generateClean': True
 }
 
 

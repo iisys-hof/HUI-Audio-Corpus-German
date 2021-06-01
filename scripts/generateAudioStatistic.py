@@ -1,5 +1,5 @@
 from numpy import source
-from ttsCode.src.dependencyInjection.DependencyInjection import DependencyInjection
+from huiAudioCorpus.dependencyInjection.DependencyInjection import DependencyInjection
 
 loadPath = '/media/ppuchtler/LangsameSSD/Projekte/espnet/egs2/HUI_Tacotron/tts1/inferences'
 savePath = '/media/ppuchtler/LangsameSSD/Projekte/espnet/egs2/HUI_Tacotron/tts1/hokuspokus_statistic'

@@ -6,6 +6,32 @@ This is the official repository for the HUI-Audio-Corpus-German. The correspondi
 
 ## Installation
 
+### Requirements
+
+* Linux
+* Anaconda 
+
+### Setup python environment with Anaconda
+
+Navigate with the terminal to the colned repository
+
+Create a new conda environment (For more informations: https://salishsea-meopar-docs.readthedocs.io/en/latest/work_env/python3_conda_environment.html)
+```
+conda create -n huiAudioCorpus python=3.8
+conda activate huiAudioCorpus
+```
+
+Install the package as devolop python package (For more informations: http://naoko.github.io/your-project-install-pip-setup/)
+
+```
+python setup.py develop
+```
+
+Install dependencys
+```
+pip install -r requirements.txt 
+```
+
 ### Python with packages
 
 ## Recreate dataset
