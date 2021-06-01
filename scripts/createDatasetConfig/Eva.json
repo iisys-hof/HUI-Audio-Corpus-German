@@ -1,0 +1,142 @@
+{
+    "balladen": {
+        "title": "balladen",
+        "LibrivoxBookName": "Balladen",
+        "GutenbergId": "spittelr/balladen/balladen.html",
+        "GutenbergStart": "In finstrer Nacht, auf steilen Wolkenpfaden,",
+        "GutenbergEnd": "",
+        "textReplacement": {
+            "1.": " ",
+            "2.": " ",
+            "3.": " ",
+            " St.": " Sankt ",
+            "ï": "i",
+            "*": " "
+        }
+    },
+    "ligeia_und_andere_novellen": {
+        "title": "ligeia_und_andere_novellen",
+        "LibrivoxBookName": "Ligeia und Andere Novellen",
+        "GutenbergId": 50887,
+        "GutenbergStart": "Und es liegt darin der Wille, der",
+        "GutenbergEnd": "Genien und Gnomen.",
+        "textReplacement": {
+            "nennt[1],": "nennt, ",
+            "[Fußnote 1: Denn da Jupiter während der Winterzeit zweimal sieben Tage": "",
+            "Wärme schenkt, so haben die Menschen diese milde und gemäßigte Zeit die": "",
+            "Amme des schönen Eisvogels genannt. -- Simonides]": "",
+            "Gemach der Bibliothek": " Gemach der Bibliothek. Fussnote Denn da Jupiter während der Winterzeit zweimal sieben Tage Wärme schenkt, so haben die Menschen diese milde und gemäßigte Zeit die Amme des schönen Eisvogels genannt.    Simonides. Ende der Fussnote.",
+            "Mond[2],": "Mond Zwei,",
+            "die Sonne ist;" : " die Sonne is. Fussnote zwei,m Mond im Englischen weiblich, Sonne männlich. Anmerkung der Übersetzerin. ",
+            "[Fußnote 2: Mond im Englischen weiblich, Sonne männlich. A. d. Üb.]": "",
+            "sieht[3].": "sieht drei. Fussnote drei, Wo Pomponius Mela in seiner Abhandlung De Situ Orbis von Flut und Ebbe spricht, sagt er: Entweder ist die Welt ein großes Tier, oder und so wieter. Ender der Fussnote drei. ",
+            "[Fußnote 3: Wo Pomponius Mela in seiner Abhandlung »De Situ Orbis« von": "",
+            "Flut und Ebbe spricht, sagt er: »Entweder ist die Welt ein großes Tier,": "",
+            "oder« usw.]": "",
+            "Franzose[4]": "Franzose vier",
+            "belle chose«?": "belle chose? Fussnote vier, Balzac, dem Sinne nach, ich weiß nicht mehr die Worte. Ende der Fussnote vier.",
+            "[Fußnote 4: Balzac, dem Sinne nach; ich weiß nicht mehr die Worte.]": "",
+            "können.[5]": "können fünf. Fussnote fünf, Florem putares nare per liquidum aethera. P Commire. Ender der Fussnote fünf.",
+            "[Fußnote 5: Florem putares nare per liquidum aethera. -- P. Commire]": "",
+            " Mr.": " Mister ",
+            " on.": " on .",
+            "*": " ",
+            "[": " ",
+            "]": " ",
+            "ë": "e"
+        }
+    },
+    "fabeln_und_erzhlungen": {
+        "title": "fabeln_und_erzhlungen",
+        "LibrivoxBookName": "Fabeln und Erzählungen",
+        "GutenbergId": 9335,
+        "GutenbergStart": "",
+        "GutenbergEnd": "",
+        "textReplacement": {
+            "*": " "
+        }
+    },
+    "toten_seelen": {
+        "title": "toten_seelen",
+        "LibrivoxBookName": "toten Seelen",
+        "GutenbergId": "gogol/toteseel/toteseel.html",
+        "GutenbergStart": "",
+        "GutenbergEnd": "irdischen Amtes zu achten, weil wir es schon alle dunkel ahnen und weil wir kaum",
+        "textReplacement": {
+            " von Ew.": " von euerer ",
+            "d. h.": " das heißt ",
+            " z. B.": " zum Beispiel ",
+            " N. N.": " N N ",
+            " usw.": "  und so weiter",
+            " Nr.": " Nummer ",
+            " St.": " Sankt ",
+            " Ew.": " Eure ",
+            "a. D.": " a D ",
+            "a.D.": " a D ",
+            "1845": "achtzehnhundertfünfundvierzig",
+            "1850": "achtzehnhundertfünfzig",
+            "1812": "achtzehnhundertzwölf",
+            "1814": "achtzehnhundertvierzehn",
+            "1835": "achtzehnhundertfünfunddreißig",
+            "1841": "achtzehnhunderteinundvierzig",
+            "1840": "achtzehnhundertvierzig",
+            "1842": "achtzehnhundertzweiundvierzig",
+            "1852": "achtzehnhundertzweiundfünfzig",
+            "10.": "zehnten",
+            "21.": "einundzwanzigsten",
+            "4a": "vier A ",
+            "34": "vierunddreißig",
+            "9.": "neunte",
+            "I.": "Erstens ",
+            "II.":"Zweitens "
+        }
+    },
+    "wir_fanden_einen_pfad_neue_gedichte": {
+        "title": "wir_fanden_einen_pfad_neue_gedichte",
+        "LibrivoxBookName": "Wir fanden einen Pfad: Neue Gedichte",
+        "GutenbergId": 9623,
+        "GutenbergStart": "",
+        "GutenbergEnd": "",
+        "textReplacement": {
+            "F1ügelschuhn": "Flügelschuhn",
+            "G1ühwürmchen": "Glühwürmchen",
+            "B1üte,": "Blüte,",
+            "1912": "neunzehnhundertzwölf"
+        }
+    },
+    "werde_die_du_bist": {
+        "title": "werde_die_du_bist",
+        "LibrivoxBookName": "Werde, die Du bist",
+        "GutenbergId": "dohm/wiedu/wiedu.html",
+        "GutenbergStart": "In der Irrenanstalt des Doktor Behrend,",
+        "GutenbergEnd": "",
+        "textReplacement": {
+            " u.s.w.": " und so weiter ",
+            " Z. B.": " zum Beispiel ",
+            " z.B.": " zum Beispiel ",
+            "10.000": "zehntausend",
+            "1894": "achtzehnhundertvierundneunzig",
+            "2500": "zweitausendfünfhundert",
+            "3000": "dreitausend",
+            "1500": "fünfzehnhundert",
+            "54": "vierundfünfzig",
+            "35": "fünfunddreißig",
+            "18": "achtzehn",
+            "*": " ",
+            "ô": "o"
+        }
+    },
+    "kleine_lord_version_2": {
+        "title": "kleine_lord_version_2",
+        "LibrivoxBookName": "kleine Lord (version 2)",
+        "GutenbergId": "burnett/lord/lord.html",
+        "GutenbergStart": "Cedrik selbst wußte kein Sterbenswörtchen davon,",
+        "GutenbergEnd": "",
+        "textReplacement": {
+            "4.": "vierte",
+            "Mr.": " Mister ",
+            "p. s.": " p s ",
+            "·": " "
+        }
+    }
+}

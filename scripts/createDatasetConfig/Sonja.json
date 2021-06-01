@@ -1,0 +1,41 @@
+{
+    "deutschland_ein_wintermrchen": {
+        "title": "deutschland_ein_wintermrchen",
+        "LibrivoxBookName": "Deutschland. Ein Wintermärchen",
+        "GutenbergId": 6079,
+        "GutenbergStart": "VORWORT",
+        "GutenbergEnd": "",
+        "textReplacement": {
+            "1844":"achtzehnhundertvierundvierzig",
+            "17.":"siebzehnsten",
+            "***":"Punkt Punkt Punkt",
+            "CAPUT I\n":"CAPUT eins",
+            "CAPUT II\n":"CAPUT zwei",
+            "CAPUT III\n":"CAPUT drei",
+            "CAPUT IV\n":"CAPUT vier",
+            "CAPUT V\n":"CAPUT fünf",
+            "CAPUT VI\n":"CAPUT sechs",
+            "CAPUT VII\n":"CAPUT sieben",
+            "CAPUT VIII\n":"CAPUT acht",
+            "CAPUT IX\n":"CAPUT neun",
+            "CAPUT X\n":"CAPUT zehn",
+            "CAPUT XI\n":"CAPUT elf",
+            "CAPUT XII\n":"CAPUT zwölf",
+            "CAPUT XIII\n":"CAPUT dreizehn",
+            "CAPUT XIV\n":"CAPUT vierzehn",
+            "CAPUT XV\n":"CAPUT fünfzehn",
+            "CAPUT XVI\n":"CAPUT sechszehn",
+            "CAPUT XVII\n":"CAPUT siebzehn",
+            "CAPUT XVIII\n":"CAPUT achtzehn",
+            "CAPUT XIX\n":"CAPUT neunzehn",
+            "CAPUT XX\n":"CAPUT zwanzig",
+            "CAPUT XXI\n":"CAPUT einundzwanzig",
+            "CAPUT XXII\n":"CAPUT zweiundzwanzig",
+            "CAPUT XXIII\n":"CAPUT dreiundzwanzig",
+            "CAPUT XXIV\n":"CAPUT vierundzwanzig",
+            "CAPUT XXV\n":"CAPUT fünfunzwanzig",
+            "CAPUT XXVI\n":"CAPUT sechundzwanzig",
+            "CAPUT XXVII\n":"CAPUT siebenundzwanzig"
+        }
+    }
+}
