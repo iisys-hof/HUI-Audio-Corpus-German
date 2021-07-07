@@ -1,6 +1,11 @@
 # HUI-Audio-Corpus-German
 This is the official repository for the HUI-Audio-Corpus-German. The corresponding paper is in the process of publication.  With the repository it is possible to automatically recreate the dataset. It is also possible to add more speakers to the processing pipeline.
 
+Dataset: https://opendata.iisys.de/datasets.html
+
+Live example: http://narvi.sysint.iisys.de/projects/tts
+
+Paper(under review): https://arxiv.org/abs/2106.06309
 
 ## Speaker overview
 
