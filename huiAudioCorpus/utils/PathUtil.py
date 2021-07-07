@@ -2,7 +2,7 @@ from io import BufferedReader
 import json
 from pathlib import Path
 import os
-import ttsCode.testOutput as testOutput
+import huiAudioCorpus.testOutput as testOutput
 from tqdm import tqdm 
 import requests
 from zipfile import ZipFile

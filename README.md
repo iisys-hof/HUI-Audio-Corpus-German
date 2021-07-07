@@ -32,8 +32,6 @@ Install dependencys
 pip install -r requirements.txt 
 ```
 
-### Python with packages
-
 ## Recreate dataset
 
 ## Create new speacker

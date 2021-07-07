@@ -33,51 +33,31 @@ from huiAudioCorpus.workflows.createDatasetWorkflow.Step2_SplitAudio import Step
 from huiAudioCorpus.persistenz.AudiosFromLibrivoxPersistenz import AudiosFromLibrivoxPersistenz
 from huiAudioCorpus.workflows.createDatasetWorkflow.Step1_DownloadAudio import Step1_DownloadAudio
 from huiAudioCorpus.converter.StringToSentencesConverter import StringToSentencesConverter
-from huiAudioCorpus.transformer.GlowTtsConfigTransformer import GlowTtsConfigTransformer
 from frosch import hook
 hook(theme = 'paraiso_dark')
 import logging
 disableLog()
 
-from huiAudioCorpus.utils.SecureFTP import SecureFTP
-from huiAudioCorpus.transformer.YamlConfigurationTransformer import ParallelWaveGanConfigTransformer
-from huiAudioCorpus.persistenz.YamlPersistenz import YamlPersistenz
 from huiAudioCorpus.error.DependencyInjectionError import DependencyInjectionError
 from huiAudioCorpus.converter.ListToHistogramConverter import ListToHistogramConverter
 from huiAudioCorpus.converter.ListToStatisticConverter import ListToStatisticConverter
 from huiAudioCorpus.ui.Plot import Plot
 from huiAudioCorpus.components.TextStatisticComponent import TextStatisticComponent
 from huiAudioCorpus.components.AudioStatisticComponent import AudioStatisticComponent
-from huiAudioCorpus.converter.AudioToPowerMelSpectrogramConverter import AudioToPowerMelSpectrogramConverter
-from huiAudioCorpus.converter.AudioToParallelWaveGanSpectrogramConverter import AudioToParallelWaveGanMelSpectrogramConverter
 from huiAudioCorpus.utils.PathUtil import PathUtil
 from huiAudioCorpus.utils.FileListUtil import FileListUtil
-from huiAudioCorpus.persistenz.SpeakerPersistenz import SpeakerPersistenz
 from huiAudioCorpus.converter.TranscriptsToSentencesConverter import TranscriptsToSentencesConverter
 from huiAudioCorpus.persistenz.AudioTranscriptPairPersistenz import AudioTranscriptPairPersistenz
-from huiAudioCorpus.components.SentencesToAudioComponent import SentencesToAudioComponent
-from huiAudioCorpus.calculator.AudioFromMelSpectrogramSpeackerCallculator import AudioFromMelSpectrogramSpeackerCallculator
-from huiAudioCorpus.calculator.MelSpectrogramFromSymbolSentenceSpeakerCallculator import MelSpectrogramFromSymbolSentenceSpeakerCallculator
 from huiAudioCorpus.converter.PhoneticSentenceToSymbolSentenceConverter import PhoneticSentenceToSymbolSentenceConverter
 from huiAudioCorpus.converter.SentenceToPhoneticSentenceConverter import SentenceToPhoneticSentenceConverter
 from huiAudioCorpus.transformer.AudioAddSilenceTransformer import AudioAddSilenceTransformer
 from huiAudioCorpus.transformer.TranscriptsSelectionTransformer import TranscriptsSelectionTransformer
-from huiAudioCorpus.workflows.ResampleCopyFilterAudioWorkflow import ResampleCopyFilterAudioWorkflow
 from huiAudioCorpus.transformer.AudioSamplingRateTransformer import AudioSamplingRateTransformer
 from huiAudioCorpus.persistenz.TranscriptsPersistenz import TranscriptsPersistenz
 from huiAudioCorpus.persistenz.AudioPersistenz import AudioPersistenz
-from huiAudioCorpus.persistenz.HParamsPersistenz import HParamsPersistenz
 from huiAudioCorpus.filter.AudioFilter import AudioFilter
-from huiAudioCorpus.persistenz.MelSpectrogramScalerPersistenz import MelSpectrogramScalerPersistenz
-from huiAudioCorpus.transformer.MelSpectrogramScalerTransformer import MelSpectrogramScalerTransformer
-from huiAudioCorpus.persistenz.CredentialsPersistenz import CredentialsPersistenz
-from huiAudioCorpus.workflows.trainWorkflow.Step1_CopyDatasetsToLocal import Step1_CopyDatasetsToLocal
 from huiAudioCorpus.transformer.AudioFadeTransformer import AudioFadeTransformer
-from normalizer.normalizer import Normalizer
-from huiAudioCorpus.workflows.TextAndAudioStatisticWorkflow import TextAndAudioStatisticWorkflow
-import ttsCode.testData.speaker as libraryPathModule
-
-import credentials as credentials
+from huiAudioCorpus.calculator.TextNormalizer import TextNormalizer
 
 import inspect
 
@@ -89,34 +69,22 @@ defaultConfig = {
         'endDurationSeconds': 0.7,
         'startDurationSeconds': 0
     },
-    'sentenceToPhoneticSentenceConverter': {
-        'libraryPath': list(libraryPathModule.__path__)[0] + '/phonemeLibraryGerman.csv'
-    },
-    'credentialsPersistenz': {
-        'path': list(credentials.__path__)[0] + '/credentials.json'
-    },
     'listToHistogramConverter': {
         'stepSize':1
     }
 }
 
 class DependencyInjection:
-    #Extern
-    normalizer: Normalizer
     #Calculators
-    audioFromMelSpectrogramSpeackerCallculator:AudioFromMelSpectrogramSpeackerCallculator
-    melSpectrogramFromSymbolSentenceSpeakerCallculator:MelSpectrogramFromSymbolSentenceSpeakerCallculator
     alignSentencesIntoTextCalculator: AlignSentencesIntoTextCalculator
+    textNormalizer: TextNormalizer
 
         
     #Components
-    sentencesToAudioComponent:SentencesToAudioComponent
     audioStatisticComponent: AudioStatisticComponent
     textStatisticComponent: TextStatisticComponent
 
     #Converters
-    audioToParallelWaveGanMelSpectrogramConverter:AudioToParallelWaveGanMelSpectrogramConverter
-    audioToPowerMelSpectrogramConverter:AudioToPowerMelSpectrogramConverter
     phoneticSentenceToSymbolSentenceConverter:PhoneticSentenceToSymbolSentenceConverter
     sentenceToPhoneticSentenceConverter:SentenceToPhoneticSentenceConverter
     transcriptsToSentencesConverter:TranscriptsToSentencesConverter
@@ -132,22 +100,14 @@ class DependencyInjection:
     #Persistence
     audioPersistenz:AudioPersistenz
     audioTranscriptPairPersistenz:AudioTranscriptPairPersistenz
-    melSpectrogramScalerPersistenz:MelSpectrogramScalerPersistenz
     transcriptsPersistenz:TranscriptsPersistenz
-    credentialsPersistenz: CredentialsPersistenz
-    yamlPersistenz:YamlPersistenz
-    hParamsPersistenz:HParamsPersistenz
     audiosFromLibrivoxPersistenz:AudiosFromLibrivoxPersistenz
     GutenbergBookPersistenz: GutenbergBookPersistenz
     
     #Transformers
     audioAddSilenceTransformer:AudioAddSilenceTransformer
     audioSamplingRateTransformer:AudioSamplingRateTransformer
-    melSpectrogramScalerTransformer:MelSpectrogramScalerTransformer
-    speakerPersistenz:SpeakerPersistenz
     transcriptsSelectionTransformer:TranscriptsSelectionTransformer
-    parallelWaveGanConfigTransformer:ParallelWaveGanConfigTransformer
-    glowTtsConfigTransformer:GlowTtsConfigTransformer
     audioSplitTransformer: AudioSplitTransformer
     sentenceDistanceTransformer: SentenceDistanceTransformer
     audioLoudnessTransformer: AudioLoudnessTransformer
@@ -157,12 +117,9 @@ class DependencyInjection:
     #Utilities
     pathUtil:PathUtil
     fileListUtil: FileListUtil
-    secureFTP: SecureFTP
 
     #Workflows
-    resampleCopyFilterAudioWorkflow:ResampleCopyFilterAudioWorkflow
     step0_Overview: Step0_Overview
-    step1_CopyDatasetsToLocal: Step1_CopyDatasetsToLocal
     step1_DownloadAudio: Step1_DownloadAudio
     step2_SplitAudio: Step2_SplitAudio
     step2_1_AudioStatistic: Step2_1_AudioStatistic
@@ -174,8 +131,6 @@ class DependencyInjection:
     step7_AudioRawStatistic: Step7_AudioRawStatistic
     step8_DatasetStatistic: Step8_DatasetStatistic
     step9_GenerateCleanDataset: Step9_GenerateCleanDataset
-
-    textAndAudioStatisticWorkflow: TextAndAudioStatisticWorkflow
 
     #plot
     plot: Plot

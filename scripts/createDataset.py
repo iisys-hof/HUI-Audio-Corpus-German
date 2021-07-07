@@ -1,7 +1,7 @@
 from typing import Dict
 from huiAudioCorpus.dependencyInjection.DependencyInjection import DependencyInjection
 import datasetWorkflow
-import ttsCode.scripts.createDatasetConfig as createDatasetConfig
+import scripts.createDatasetConfig as createDatasetConfig
 from huiAudioCorpus.utils.PathUtil import PathUtil
 import os
 

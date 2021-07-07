@@ -11,7 +11,7 @@ try:
 except:
     print('failed to load deepspeech, if you need it, try to install it')
 
-from sttInference import deepspeechModel
+from huiAudioCorpus.sttInference import deepspeechModel
 
 class AudioToSentenceConverter:
     def __init__(self):

@@ -23,3 +23,5 @@ python-Levenshtein
 deepspeech
 gutenberg
 pyloudnorm
+pandas_profiling
+lxml

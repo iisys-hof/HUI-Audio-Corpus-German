@@ -2,16 +2,16 @@
 from huiAudioCorpus.utils.PathUtil import PathUtil
 from typing import Dict, List
 from huiAudioCorpus.utils.DoneMarker import DoneMarker
-from normalizer.normalizer import Normalizer
+from huiAudioCorpus.calculator.TextNormalizer import TextNormalizer
 
 import re
 import json
 
 class Step3_1_PrepareText:
 
-    def __init__(self, savePath: str, loadFile: str, saveFile: str, startSentence: str, endSentence: str, textReplacement: Dict[str,str],  normalizer: Normalizer, moves: List[Dict[str, str]], remove: List[Dict[str, str] ]):
+    def __init__(self, savePath: str, loadFile: str, saveFile: str, startSentence: str, endSentence: str, textReplacement: Dict[str,str],  textNormalizer: TextNormalizer, moves: List[Dict[str, str]], remove: List[Dict[str, str] ]):
         self.savePath = savePath
-        self.normalizer = normalizer
+        self.textNormalizer = textNormalizer
         self.loadFile = loadFile
         self.saveFile = saveFile
         self.textReplacement = textReplacement
@@ -236,7 +236,7 @@ class Step3_1_PrepareText:
             print(remainingNumbers)
             replacements = {}
             for text in remainingNumbers:
-                replacements[text] = self.normalizer.normalize(text)
+                replacements[text] = self.textNormalizer.normalize(text)
             replacements = dict(sorted(replacements.items(), key=lambda item: len(item[0]), reverse=True))
             print(json.dumps(replacements, indent=4, ensure_ascii=False))
 

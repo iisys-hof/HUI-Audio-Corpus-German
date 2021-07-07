@@ -136,3 +136,8 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+datasetWorkflow/
+huiAudioCorpus/sttInference/deepspeechModel/alphabet.txt
+huiAudioCorpus/sttInference/deepspeechModel/kenlm.scorer
+huiAudioCorpus/sttInference/deepspeechModel/lm.binary
+huiAudioCorpus/sttInference/deepspeechModel/output_graph.pb
