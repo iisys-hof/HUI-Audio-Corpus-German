@@ -92,7 +92,12 @@ externalPaths = [
 
 ## Create new speacker
 
-If you want to 
+If you want to create a new speacker you have to do the following steps:
+* Create a json file inside the scripts/createDatasetConfig with your speacker. Here you can find examples of how the file should look. Infos about the speackers could be found at datasetWorkflow/overview
+* Validate text replacements, the script helps you with the needed steps
+* finisch dataset and create a push request
 
 ## Create statistic for other datasets
 
+We have a script for create the statistic as standalone.
+For the usage you have to cahange the variables "loadPath" and "savePath" inside the file "scripts/generrateAudioStatistic.py"
