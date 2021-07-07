@@ -25,8 +25,10 @@ class Step9_GenerateCleanDataset:
 
     def script(self):
         df = pd.read_csv(self.infoFile, sep='|' , index_col=0)
-        df = df.set_index('id')
-
+        try:
+            df = df.set_index('id')
+        except:
+            pass
 
         print('Audios bevore: ', df.shape[0])
         filteredAudios = self.filter(df)
