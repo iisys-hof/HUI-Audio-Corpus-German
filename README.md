@@ -48,7 +48,7 @@ Install dependencys
 pip install -r requirements.txt 
 ```
 
-Download: ***************** and copy the content of the downloaded zip into the folder:
+Download: https://opendata.iisys.de/systemintegration/Datasets/deepspeechModel/deepspeechModel.zip and copy the content of the downloaded zip into the folder:
 
 ```
 /huiAudioCorpus/sttInference/deepspeechModel
