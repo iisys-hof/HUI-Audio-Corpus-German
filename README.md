@@ -5,7 +5,7 @@ Dataset: https://opendata.iisys.de
 
 Live example: http://narvi.sysint.iisys.de/projects/tts
 
-Paper(under review): https://arxiv.org/abs/2106.06309
+Paper (presented at 44th German Conference on Artificial Intelligence (KI2021)): https://arxiv.org/abs/2106.06309
 
 ## Speaker overview
 
