@@ -16,7 +16,7 @@ Paper (presented at 44th German Conference on Artificial Intelligence (KI2021)):
 * karlsson
 * sonja
 
-### Not finisched
+### Not finished
 
 * redaer
 
